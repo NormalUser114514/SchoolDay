@@ -1,0 +1,15 @@
+{
+    "servers": {
+        "godotiq": {
+            "type": "stdio",
+            "command": "uvx",
+            "args": [
+                "godotiq"
+            ],
+            "env": {
+                "GODOTIQ_PROJECT_ROOT": "D:/C++GAME/schoolDay"
+            }
+        }
+    },
+    "inputs": []
+}

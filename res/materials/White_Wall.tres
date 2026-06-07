@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://co4fmr36sb2du"]
+
+[ext_resource type="Texture2D" uid="uid://b6kaxpxe77pqt" path="res://res/materials/White_Wall_Texture.jpg" id="1_50fxs"]
+
+[resource]
+albedo_texture = ExtResource("1_50fxs")
+roughness = 0.7

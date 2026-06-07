@@ -1,0 +1,240 @@
+[gd_scene format=3 uid="uid://d151l3lfl5y0y"]
+
+[ext_resource type="Texture2D" uid="uid://eufvlgqfjclf" path="res://res/images/background/mainSecen.jpg" id="1_d3352"]
+[ext_resource type="Script" uid="uid://bh8oj8vd5dqma" path="res://scripts/StartMenu/StartMenu.gd" id="2_ufv5y"]
+[ext_resource type="Script" uid="uid://c65hanh7knn2h" path="res://scripts/StartMenu/MenuItem.gd" id="3_0d5ky"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3352"]
+bg_color = Color(0, 0, 0, 0.60784316)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id="Animation_ufv5y"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TitleLabel:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TitleLabel:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(80, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(22.800003, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(224, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_d3352"]
+resource_name = "menu_enter"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TitleLabel:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(-400, -0.0005, 0, 0.0005, 0, 0, -0.04983334, -66.666664, 0, 0),
+"times": PackedFloat32Array(0.001, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TitleLabel:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(80, -0.0005, 0, 0.0005, 0, 80, -0.04983334, 0, 0, 0),
+"times": PackedFloat32Array(0.001, 0.3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(-400, -0.25, 0, 0.25, 0, 22.800003, -0.050000004, -70.46667, 0, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(224, -0.25, 0, 0.25, 0, 224, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ufv5y"]
+_data = {
+&"RESET": SubResource("Animation_ufv5y"),
+&"menu_enter": SubResource("Animation_d3352")
+}
+
+[sub_resource type="Theme" id="Theme_0d5ky"]
+default_font_size = 30
+
+[node name="StartMenu" type="Control" unique_id=2046811442]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_ufv5y")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1533651282]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_d3352")
+stretch_mode = 6
+
+[node name="MenuPanel" type="Panel" parent="." unique_id=78118944]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 345.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d3352")
+
+[node name="TitleLabel" type="Label" parent="MenuPanel" unique_id=1643401256]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 80.0
+offset_bottom = 147.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.5686275, 0.9137255, 0.85882354, 1)
+theme_override_font_sizes/font_size = 48
+text = "江外模拟器"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LinkButtons" type="VBoxContainer" parent="MenuPanel" unique_id=1803703433]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.7
+offset_top = -100.0
+offset_right = 150.30157
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="AnimPlayer" type="AnimationPlayer" parent="MenuPanel/LinkButtons" unique_id=317182755]
+libraries/ = SubResource("AnimationLibrary_ufv5y")
+
+[node name="StartLinkBg" type="Panel" parent="MenuPanel/LinkButtons" unique_id=1043141437]
+custom_minimum_size = Vector2(200, 120)
+layout_mode = 2
+size_flags_vertical = 6
+script = ExtResource("3_0d5ky")
+
+[node name="StartLink" type="Label" parent="MenuPanel/LinkButtons/StartLinkBg" unique_id=655614094]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 0.3254902, 1)
+theme_override_font_sizes/font_size = 32
+text = "开始游戏"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingLinkBg" type="Panel" parent="MenuPanel/LinkButtons" unique_id=604210178]
+custom_minimum_size = Vector2(200, 120)
+layout_mode = 2
+size_flags_vertical = 2
+size_flags_stretch_ratio = 1.59
+script = ExtResource("3_0d5ky")
+
+[node name="SettingLink" type="Label" parent="MenuPanel/LinkButtons/SettingLinkBg" unique_id=1757377633]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 0
+offset_top = 15.0
+offset_right = 300.0
+offset_bottom = 105.0
+theme_override_font_sizes/font_size = 32
+text = "设置"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuitLinkBg" type="Panel" parent="MenuPanel/LinkButtons" unique_id=1049792894]
+custom_minimum_size = Vector2(200, 120)
+layout_mode = 2
+size_flags_vertical = 2
+script = ExtResource("3_0d5ky")
+
+[node name="QuitLink" type="Label" parent="MenuPanel/LinkButtons/QuitLinkBg" unique_id=391482841]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 0
+offset_top = 15.0
+offset_right = 300.0
+offset_bottom = 105.0
+theme_override_font_sizes/font_size = 32
+text = "退出"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitConfirmDialog" type="ConfirmationDialog" parent="." unique_id=220532459]
+oversampling_override = 1.0
+title = "退出游戏"
+position = Vector2i(188, 80)
+size = Vector2i(500, 309)
+theme = SubResource("Theme_0d5ky")
+ok_button_text = "是"
+dialog_text = "您真的要退出游戏吗？"
+cancel_button_text = "否"
