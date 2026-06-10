@@ -1,15 +1,14 @@
 {
     "servers": {
-        "godotiq": {
-            "type": "stdio",
-            "command": "uvx",
+        "godot-agent-tools": {
+            "command": "npx",
             "args": [
-                "godotiq"
+                "-y",
+                "godot-agent-tools-mcp"
             ],
             "env": {
-                "GODOTIQ_PROJECT_ROOT": "D:/C++GAME/schoolDay"
+                "GODOT_AGENT_PORT": "6005"
             }
         }
-    },
-    "inputs": []
+    }
 }

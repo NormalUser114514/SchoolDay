@@ -1,0 +1,9 @@
+name: Godot MCP Server
+version: 0.0.1
+schema: v1
+mcpServers:
+  - name: godot-agent-tools
+    command: npx
+    args:
+      - "-y"
+      - "godot-agent-tools-mcp"

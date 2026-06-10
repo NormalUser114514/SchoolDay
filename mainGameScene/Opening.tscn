@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://dq2tussvjlb6f" path="res://res/3dModel/Human/Protagonist/Protagonist_shoes02_diffuse_10.png" id="18_076f1"]
 [ext_resource type="Texture2D" uid="uid://elwkpwg3cdxb" path="res://res/3dModel/Human/Protagonist/Protagonist_teeth.png" id="19_n8wnk"]
 [ext_resource type="Texture2D" uid="uid://c6if0u1fu8ali" path="res://res/3dModel/Human/Protagonist/Protagonist_tongue01_diffuse.png" id="20_3sdhh"]
+[ext_resource type="PackedScene" uid="uid://e62acchg4b8k" path="res://res/3dModel/Bedroom/desk/desk.glb" id="20_5fhh2"]
 [ext_resource type="AudioStream" uid="uid://casm5sb71w27o" path="res://res/sounds/Opening/clockBingbing.mp3" id="20_hgrp6"]
 [ext_resource type="AudioStream" uid="uid://c0ji4111y0hdb" path="res://res/sounds/Opening/itemDrop.mp3" id="21_av5f4"]
 [ext_resource type="AudioStream" uid="uid://c5rhyalpbmxn8" path="res://res/sounds/Opening/shout.mp3" id="22_4gfxt"]
@@ -482,6 +483,30 @@ tracks/9/path = NodePath("Protagonist:mixamorig_RightArm")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = PackedFloat32Array(0, 1, 0.141247, -0.174402, 0.025287, 0.974163, 0.5, 1, 0.349094, -0.223349, 0.606531, -0.678505, 1.7, 1, -0.34909394, 0.22334898, -0.60653096, 0.6785048, 3.8, 1, 0.172714, 0.236924, 0.359412, 0.885923)
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Protagonist/desk:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.762489, 0.19397669, 0.5655575)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Protagonist/desk:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.7462295e-07, 3.1415925, 2.2737368e-11)]
+}
 
 [sub_resource type="Animation" id="Animation_fem4r"]
 length = 0.001
@@ -757,6 +782,30 @@ tracks/25/path = NodePath("Protagonist:mixamorig_RightArm")
 tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = PackedFloat32Array(0, 1, 0.141247, -0.174402, 0.025287, 0.974163)
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Protagonist/desk:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.762489, 0.19397669, 0.5655575)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Protagonist/desk:rotation")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.7462295e-07, 3.1415925, 2.2737368e-11)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xysal"]
 _data = {
@@ -1441,7 +1490,7 @@ bones/7/name = "mixamorig_RightLeg"
 bones/7/parent = 6
 bones/7/rest = Transform3D(0.9968868, 0.011916818, -0.0779418, 0.006254553, 0.9734463, 0.22883049, 0.07859908, -0.22860558, 0.970341, -3.0267984e-09, 0.3165581, -2.7939677e-09)
 bones/7/enabled = true
-bones/7/position = Vector3(-4.5820812e-08, 0.316558, 9.883178e-08)
+bones/7/position = Vector3(-3.0267984e-09, 0.3165581, -2.7939677e-09)
 bones/7/rotation = Quaternion(-0.60104626, 0.039779015, 0.07497103, 0.79469526)
 bones/7/scale = Vector3(1.0000002, 0.99999976, 0.99999976)
 bones/8/name = "mixamorig_RightFoot"
@@ -1497,7 +1546,7 @@ bones/15/name = "mixamorig_LeftForeArm"
 bones/15/parent = 14
 bones/15/rest = Transform3D(0.82895553, -0.5027657, 0.24507028, 0.5568606, 0.70087636, -0.4457338, 0.05233568, 0.50596344, 0.8609657, -2.7008355e-08, 0.18639216, -3.8184226e-08)
 bones/15/enabled = true
-bones/15/position = Vector3(-2.7008355e-08, 0.18639216, -3.8184226e-08)
+bones/15/position = Vector3(-0.006514138, 0.22189802, -0.009356674)
 bones/15/rotation = Quaternion(-0.5276122, 0.04601933, 0.25300854, 0.80962604)
 bones/15/scale = Vector3(0.9999986, 1.0000011, 1.0000008)
 bones/16/name = "mixamorig_LeftHand"
@@ -1804,6 +1853,9 @@ skeleton = NodePath("..")
 mesh = SubResource("ArrayMesh_ryjef")
 skin = SubResource("Skin_dtatx")
 skeleton = NodePath("..")
+
+[node name="desk" parent="Protagonist" unique_id=1865270994 instance=ExtResource("20_5fhh2")]
+transform = Transform3D(-0.32, 7.284396e-12, 4.8318654e-08, 7.275958e-12, 0.32000005, -5.5879344e-08, -4.8318654e-08, -5.5879354e-08, -0.32, -2.762489, 0.19397669, 0.5655575)
 
 [node name="FadeOverlay" type="Control" parent="." unique_id=1355898823]
 layout_mode = 3
